@@ -1,18 +1,3 @@
-// list matching
-var [a, , b] = [1,2,3];
-
-a
-b
-
-
-
-
-
-
-
-
-
-
 function getASTNode() {
     return { op: a, lhs: 12, rhs: 18 }
 }
@@ -27,9 +12,14 @@ oldOp
 oldlhs
 oldrhs
 
+
+// New way
+
 const {op, lhs, rhs} = getASTNode()
 
-
+op
+lhs
+rhs
 
 
 
@@ -39,12 +29,5 @@ const {op, lhs, rhs} = getASTNode()
 function g({name: x}) {
   console.log(x);
 }
+
 g({name: 5})
-
-// Fail-soft destructuring
-var [a] = [];
-a === undefined;
-
-// Fail-soft destructuring with defaults
-var [a = 1] = [];
-a === 1;
