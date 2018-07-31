@@ -1,14 +1,17 @@
-class SkinnedMesh extends THREE.Mesh {
-    constructor(geometry, materials) {
-        super(geometry, materials);
-
-        this.idMatrix = SkinnedMesh.defaultMatrix();
-        this.bones = [];
-        this.boneMatrices = [];
-    }
-
-
-    getData() {
-        return this.data
-    }
+class Tea {
+  constructor() {
+    this.color = 'green'
+  }
+  changeColor(color) {
+    this.color = color
+  }
+  getColor() {
+      return this.color
+  }
 }
+
+const t = new Tea()
+
+t.changeColor("red")
+const r = t.getColor()
+r

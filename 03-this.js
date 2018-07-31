@@ -12,7 +12,7 @@ bob.printFriends()
 
 
 
-
+// would not work
 var ramy = {
     _name: "Bob",
     _friends: ["Ahmed", "Essam", "Amr"],

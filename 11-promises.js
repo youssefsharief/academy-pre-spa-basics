@@ -1,13 +1,14 @@
-function timeout(duration = 0) {
+function getUsers() {
     return new Promise((resolve, reject) => {
-        setTimeout(resolve, duration);
+        setTimeout(()=>resolve((["Ahmed", "Essam", "Youssef"])), 2000)
     })
 }
 
-var p = timeout(1000).then(() => {
-    return timeout(2000);
-}).then(() => {
-    throw new Error("hmm");
+getUsers().then((x) => {
+    console.log(x)
 }).catch(err => {
-    return Promise.all([timeout(100), timeout(200)]);
+    console.log(err)
 })
+
+
+console.log('doing stuff')
